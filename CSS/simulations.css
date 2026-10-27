@@ -1,0 +1,115 @@
+.simulation-controls {
+    margin: 18px 0;
+    border: 1px solid #31443e;
+    background-color: #101817;
+    padding: 16px;
+}
+
+.simulation-controls h3 {
+    margin: 0 0 12px;
+}
+
+.simulation-controls label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.simulation-controls output {
+    color: #9fe0af;
+}
+
+.simulation-controls input[type="range"] {
+    width: min(100%, 420px);
+    margin: 0 12px 12px 0;
+    accent-color: #9fe0af;
+    vertical-align: middle;
+}
+
+.simulation-controls button {
+    padding: 8px 12px;
+    border: 1px solid #9fe0af;
+    border-radius: 4px;
+    background: #101817;
+    color: #edf4ef;
+    cursor: pointer;
+}
+
+.simulation-controls button:hover,
+.simulation-controls button:focus-visible {
+    background: #9fe0af;
+    color: #101817;
+}
+
+.simulation-controls .control-help {
+    margin: 0;
+}
+
+.simulation-display {
+    min-height: 260px;
+    border: 1px solid #31443e;
+}
+
+.logistic-map-display {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logistic-map-display figure {
+    margin: 0;
+    position: relative;
+}
+
+.logistic-map-display img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.logistic-map-display figcaption {
+    background-color: #101817;
+    border: 1px solid #9fe0af;
+    color: #edf4ef;
+    font-weight: bold;
+    margin: 0;
+    padding: 4px 7px;
+    position: absolute;
+    left: 50%;
+    top: 8px;
+    transform: translateX(-50%);
+}
+
+.logistic-map-info {
+    color: #c4d0c7;
+    line-height: 1.6;
+}
+
+@media (max-width: 720px) {
+    .logistic-map-display {
+        grid-template-columns: 1fr;
+    }
+}
+
+.pendulum-simulations {
+    width: 100%;
+}
+
+.pendulum-labels {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    margin-bottom: 8px;
+    color: #c4d0c7;
+    text-align: center;
+}
+
+.pendulum-simulations canvas {
+    display: block;
+    width: 100% !important;
+    height: auto !important;
+    box-sizing: border-box;
+    border: 1px solid #31443e;
+}

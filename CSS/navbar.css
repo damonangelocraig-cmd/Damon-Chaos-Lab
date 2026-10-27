@@ -1,0 +1,27 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 28px;
+    font-size: 14px;
+    background-color: #182321;
+    border-bottom: 1px solid #31443e;
+}
+
+header p {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    gap: 12px;
+}
+
+nav a {
+    color: #c4d0c7;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #9fe0af;
+}

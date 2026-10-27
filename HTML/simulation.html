@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulations | CHAOS LAB</title>
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/simulations.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/p5.min.js"></script>
+    <script src="../JS/class-pendulum.js" defer></script>
+    <script src="../JS/double-pendulum.js" defer></script>
+</head>
+<body>
+
+      <header>
+        <p>CHAOS LAB</p>
+        <nav>
+        <a href="index.html">Home</a>
+        <a href="simulation.html">Simulations</a>
+        <a href="history.html">History</a>
+    </nav>
+    </header>
+
+    <main>
+<section class="simulation-lab">
+        <h2>Double Pendulum</h2>
+        <p>The double pendulum is a non-linear system consisting of two pendulums attached end to end. It exhibits chaotic behavior due to its sensitivity to initial conditions. Using the Lagrangian formulation in my code, I accurately simulated double pendulum dynamics to visualize the chaotic motion which stems from the rapid transfer of energy between the two pendulums.</p>
+        <br>
+        <p>Take a look at all the ball motion diagrams. Did you notice that all the middle balls (balls in between the two pendulums) make a perfect circular outline? This is because a single pendulum moves in sinusoidal, predictable motion. However, when looking at the second (lower) ball attached to the bottom of the second pendulum, the motion becomes chaotic and the balls have no correlation in their motion. This is the basis of non-linear motion and unpredictability.</p>
+        
+        <div class="simulation-controls" aria-labelledby="pendulum-controls-title">
+            <h3 id="pendulum-controls-title">Double pendulum simulation controls</h3>
+            <label for="starting-angle">
+                First arm starting angle: <output id="starting-angle-value" for="starting-angle">150°</output>
+            </label>
+            <input id="starting-angle" type="range" min="100" max="160" value="150" step="1">
+
+            <label for="gravity">
+                Gravity strength: <output id="gravity-value" for="gravity">0.50</output>
+            </label>
+            <input id="gravity" type="range" min="0.10" max="1" value="0.50" step="0.05">
+
+            <button id="apply-pendulum-angle" type="button">Apply settings &amp; restart</button>
+            <p class="control-help">Angle range: 100°–160°. Gravity range: 0.10–1.00.</p>
+        </div>
+
+        <div class="pendulum-simulations" id="pendulum-simulations">
+            <div class="pendulum-labels">
+                <span>Double Pendulum</span>
+                <span>Ball Motion</span>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="simulation-lab">
+ <h2>Logistic Map</h2>
+        <p>The logistic equation is a simple mathematical formula that models population growth change annually. Written as x_{n+1} = r x_n (1 - x_n), it demonstrates how small changes in the parameter r can lead to drastically different behaviors, including chaos.</p>
+       
+        <div class="simulation-controls">
+            <p>This sequence of logistic maps illustrates the transition from stable behavior to chaos as the parameter r is increased. If you look closely, as the population growth factor "r" is increased, the population begins to switch back and forth between different values. As the growth factor continues to increase, the population exhibits further fluctuation, eventually reaching unpredictable population behavior.</p>
+        </div>
+
+        <div class="simulation-display logistic-map-display">
+            <figure><img src="../ASSETS/images/logistic-1.png" alt="Logistic map example one"><figcaption>Phase 1</figcaption></figure>
+            <figure><img src="../ASSETS/images/logistic-2.png" alt="Logistic map example two"><figcaption>Phase 2</figcaption></figure>
+            <figure><img src="../ASSETS/images/logistic-3.png" alt="Logistic map example three"><figcaption>Phase 3</figcaption></figure>
+            <figure><img src="../ASSETS/images/logistic-4.png" alt="Logistic map example four"><figcaption>Phase 4</figcaption></figure>
+            <figure><img src="../ASSETS/images/logistic-5.png" alt="Logistic map example five"><figcaption>Phase 5</figcaption></figure>
+        </div>
+        
+        <div class="logistic-map-info">
+        <ul>
+            <li>Parameter r controls the growth rate. Parameter X_n represents the population in the current generation, expressed as a fraction of the maximum possible carrying capacity (from 0 to 1). X_n+1 is the population in the next generation given n.</li>
+            <li>For r < 1, the population is naturally shrinking and eventually approaching extinction.</li>
+            <li>For 1 < r < 3, population grows smoothly until it reaches stable equilibrium.</li>
+            <li>For 3 < r < 3.57, the population overshoots, then crashes, oscillating back and forth between two or more different population sizes in a stable cycle.</li>
+            <li>For 3.57 < r < 4, reproduction rates become too high, population sizes fluctuate chaotically, and the system becomes unpredictable. This is the onset of chaos.</li>
+        </ul>
+        </div>
+    </section>
+
+    </main>
+
+</body>
+</html>

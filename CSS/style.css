@@ -1,0 +1,127 @@
+html {
+    font-size: 87.5%;
+}
+
+body {
+    margin: 0;
+    background-color: #1d3532;
+    color: #edf4ef;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 28px 20px;
+}
+
+section {
+    background-color: #182321;
+    border: 1px solid #31443e;
+    padding: 25px;
+    margin-bottom: 18px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: #9fe0af;
+    margin-bottom: 14px;
+}
+
+h2 {
+    color: #9fe0af;
+    border-bottom: 1px solid #31443e;
+    padding-bottom: 8px;
+    margin-bottom: 14px;
+}
+
+h3 {
+    color: #edf4ef;
+}
+
+p {
+    line-height: 1.6;
+    color: #c4d0c7;
+}
+
+.simulation-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.simulation-card {
+    height: 250px;
+    perspective: 1000px;
+}
+
+.simulation-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
+    transform-origin: center center;
+}
+
+.simulation-card:hover .simulation-card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-face {
+    position: absolute;
+    inset: 0;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #31443e;
+    background-color: #101817;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.card-front h3 {
+    margin: 0;
+}
+
+.card-back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: rotateY(180deg);
+}
+
+.card-back h3 {
+    margin-top: 0;
+}
+
+.card-back p {
+    margin-bottom: 0;
+}
+
+.simulation-sketch {
+    width: 100%;
+    height: 170px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border: 1px solid #31443e;
+    background-color: #182321;
+}
+
+.simulation-sketch img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media (max-width: 600px) {
+    .simulation-grid {
+        grid-template-columns: 1fr;
+    }
+}

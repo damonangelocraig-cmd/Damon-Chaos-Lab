@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Green double pendulum diagram</title>
+  <desc id="desc">A static double pendulum with two green bobs and thin rods on a dark green background.</desc>
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="72%">
+      <stop offset="0" stop-color="#174b3d"/>
+      <stop offset="1" stop-color="#091210"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <path d="M932 732 A378 378 0 0 0 1065 545" fill="none" stroke="#edf4ef" stroke-opacity=".8" stroke-width="6" stroke-linecap="round" stroke-dasharray="2 20"/>
+  <circle cx="760" cy="105" r="10" fill="#c4d0c7"/>
+  <path d="M760 105 L705 430 L1065 545" fill="none" stroke="#c4d0c7" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="705" cy="430" r="26" fill="#48c76c" stroke="#9fe0af" stroke-width="5"/>
+  <circle cx="1065" cy="545" r="26" fill="#48c76c" stroke="#9fe0af" stroke-width="5"/>
+</svg>
